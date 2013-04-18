@@ -6,7 +6,7 @@ Summary:  Library for input/ouput data
 Group:    System/System Control
 License:  LGPLv2
 URL:      http://meego.gitorious.org/meego-middleware/iodata
-Source0:  %{_name}-%{version}.tar.bz2
+Source0:  %{name}-%{version}.tar.bz2
 
 BuildRequires: pkgconfig(Qt5Core)
 BuildRequires: bison
