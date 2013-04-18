@@ -33,7 +33,7 @@ Requires: testrunner-lite
 %{summary}.
 
 %prep
-%setup -q -n %{_name}-%{version}
+%setup -q -n %{name}-%{version}
 
 %build
 export IODATA_VERSION=`head -n1 debian/changelog | sed "s/.*(\([^)+]*\).*/\1/"`
