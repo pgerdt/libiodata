@@ -13,14 +13,9 @@ devheaders.files = iodata.h validator.h storage.h iodata validator storage
 equals(QT_MAJOR_VERSION, 4): devheaders.path  = /usr/include/iodata
 equals(QT_MAJOR_VERSION, 5): devheaders.path  = /usr/include/iodata-qt5
 
-equals(QT_MAJOR_VERSION, 4) {
-    prf.files = iodata.prf
-    prf.path = /usr/share/qt4/mkspecs/features
-}
-equals(QT_MAJOR_VERSION, 5) {
-    prf.files = iodata-qt5.prf
-    prf.path = /usr/share/qt5/mkspecs/features
-}
+prf.path =  $$[QT_INSTALL_DATA]/mkspecs/features
+equals(QT_MAJOR_VERSION, 4): prf.files = iodata.prf
+equals(QT_MAJOR_VERSION, 5): prf.files = iodata-qt5.prf
 
 INSTALLS = target devheaders prf
 
